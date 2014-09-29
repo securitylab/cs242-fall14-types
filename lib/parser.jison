@@ -42,6 +42,8 @@ id			[a-z_]\w*
 Prog
     : Decls EOF
     { $$ = $1; return $$; }
+    | Decls NL EOF
+    { $$ = $1; return $$; }
     ;
 
 Decls
@@ -88,8 +90,8 @@ FExpr
     ;
 
 AExpr
-    : NUMBER
-        {$$ = Expr.Int($1);}
+    : INT
+        {$$ = Expr.Int(parseInt($1));}
     | NAME
         {$$ = Expr.Var($1);}
     | 'True'
