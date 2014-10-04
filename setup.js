@@ -5,8 +5,8 @@ var Decl = require('./lib/decl');
 var Pat = require('./lib/pat');
 var Type = require('./lib/type');
 
-var Ctx    = require('./ctx').Ctx;
-var MutCtx = require('./ctx').MutCtx;
+var Ctx    = require('./lib/ctx').Ctx;
+var MutCtx = require('./lib/ctx').MutCtx;
 
 require('./lib/solver');
 
